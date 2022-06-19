@@ -56,6 +56,7 @@ document.getElementById('btnKetQua').onclick = function () {
 }
 
 // Bài tập 2
+// hàm tính tiền điện
 function tinhTienDien(soKW) {
     var tienDien = 0;
     if (soKW <= 50) {
@@ -73,10 +74,13 @@ function tinhTienDien(soKW) {
 }
 
 document.getElementById('tinhTienDien').onclick = function () {
+    //input
     var ten = document.getElementById('ten').value;
     var soKW = Number(document.getElementById('soKW').value);
     var tienDien = 0;
+    // output
     var ketQua2 = '';
+    //tiến trình
     tienDien = tinhTienDien(soKW);
     ketQua2 ='Số tiền điện của ' + ten + ' là: ' + tienDien.toLocaleString();
     document.getElementById('ketQua2').innerHTML = ketQua2;
